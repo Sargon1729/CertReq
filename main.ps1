@@ -12,6 +12,10 @@ function Write-Log {
 
 Write-Log "Script started by $(whoami)"
 
+$certfolder = "$PKIRoot\Signed Certs"                                      # signed certs folder
+$Completed_csr_path = "$PKIRoot\Completed CSR"
+
+
 ###############################################################################
 
 Import-Module PSPKI
