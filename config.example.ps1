@@ -1,3 +1,2 @@
-$PKIRoot = '\path-to\pkiroot'                                              # PKI root folder
-$ca = 'CA'                                                                 # name of the CA
-$LOGFILE = ".\LOG_CertReq_PS.txt"                                          # Log file location
+$PKIRoot = '\path\to\pkiroot'# PKI root folder, not the folder from where the script is ran.
+$ca = 'root-CA' # name of the CA

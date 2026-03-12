@@ -1,19 +1,20 @@
 . ./config.ps1
 
+
 function Write-Log {
 
     param(
         [string]$Message
     )
     $date = get-date -Format "dd/MM/yyyy hh:mm:ss"
-    "$date $Message" | Out-File $LOGFILE -Append -Encoding ascii
+    "$date $Message" | Out-File ./LOG_CertReq_PS.txt -Append -Encoding ascii
     Write-Host "$date $Message" -ForegroundColor Yellow
 }
 
 Write-Log "Script started by $(whoami)"
 
-$certfolder = "$PKIRoot\Signed Certs"                                      # signed certs folder
-$Completed_csr_path = "$PKIRoot\Completed CSR"
+$certfolder = "$PKIRoot\signed_certs"                                      # signed certs folder
+$Completed_csr_path = "$PKIRoot\completed_csr"
 
 
 ###############################################################################
